@@ -17,4 +17,4 @@ steps:
     - '--allow-unauthenticated'
 images:
   - gcr.io/$PROJECT_ID/amazingapp:$COMMIT_SHA
-    logsbuckets: gs://asif-logs
+    logsBucket : gs://asif-logs
