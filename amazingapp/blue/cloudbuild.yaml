@@ -5,16 +5,18 @@ steps:
     args: ['push', 'gcr.io/$PROJECT_ID/amazingapp:$COMMIT_SHA']
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
-    - 'run'
-    - 'deploy'
-    - 'amazingapp'
-    - '--image'
-    - 'gcr.io/$PROJECT_ID/amazingapp:$COMMIT_SHA'
-    - '--region'
-    - 'us-east1'
-    - '--platform'
-    - 'managed'
-    - '--allow-unauthenticated'
+      - 'run'
+      - 'deploy'
+      - 'amazingapp'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/amazingapp:$COMMIT_SHA'
+      - '--region'
+      - 'us-east1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+
 images:
-  - gcr.io/$PROJECT_ID/amazingapp:$COMMIT_SHA
-    logsBucket : gs://asif-logs
+  - 'gcr.io/$PROJECT_ID/amazingapp:$COMMIT_SHA'
+
+logsBucket: 'gs://asif-logs'
