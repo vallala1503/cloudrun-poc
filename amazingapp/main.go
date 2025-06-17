@@ -7,7 +7,7 @@ import (
 )
 
 func HomePage(w http.ResponseWriter, r *http.Request) {
-    t, _ := template.ParseFiles("homepage.html")
+    t, _ := template.ParseFiles("templates/homepage.html")
     t.Execute(w, nil) 
 }
 
