@@ -5,5 +5,5 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o server
 
 FROM alpine:3
 RUN apk add --no-cache ca-certificates
-COPY --from=builder /app/server /server
+COPY --from=builder /app/* /
 CMD ["/server"]
